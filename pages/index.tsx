@@ -7,9 +7,9 @@ export default function Home() {
   const message: string = 'Hello, world!'
 
   let a: AddEventListenerOptions
-  let b: NodeJS.Process
+  let b: Window
 
-  console.log(b.browser);
+  console.log(b);
   
   return (
     <div>
