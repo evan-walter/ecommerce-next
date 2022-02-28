@@ -1,23 +1,18 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import { useEffect } from 'react'
+import play from '../playground'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
 
-  const message: string = 'Hello, world!'
+  useEffect(() => {
+    play()
+  }, [])
 
-  let a: AddEventListenerOptions
-  let b: Window
-
-  let person: Person = {
-    name: 'Evan'
-  }
-
-  // console.log(b);
-  
   return (
     <div>
-      {message}
+      Hello, world!
     </div>
   )
 }
