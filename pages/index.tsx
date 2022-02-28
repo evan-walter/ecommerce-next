@@ -9,7 +9,11 @@ export default function Home() {
   let a: AddEventListenerOptions
   let b: Window
 
-  console.log(b);
+  let person: Person = {
+    name: 'Evan'
+  }
+
+  // console.log(b);
   
   return (
     <div>
