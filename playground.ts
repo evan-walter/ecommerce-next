@@ -1,20 +1,11 @@
-// ts recommends interfaces over types
-
-// use interfaces to describe data structures in a more natural way
-// e.g. describing objects
-// e.g. shipment, orders
 interface Person {
   name: string
   age: number
 }
 
-// use types for type aliases
-// e.g. `type Data = string`. here, you can use Data and string types interchangably. interfaces can't do this.
-// use types to describe function types
-// type Person = {
-//   name: string
-//   age: number
-// }
+interface PersonLoggerFn {
+  (name: string, age: number): string
+}
 
 export default function play() {
   const name = 'Evan'
@@ -25,7 +16,7 @@ export default function play() {
     age: 34,
   }
 
-  function logPersonInfo(personName: string, personAge: number) {
+  const logPersonInfo: PersonLoggerFn = (personName: string, personAge: number): string => {
     const info = `Name: ${personName}, Age: ${personAge}`
     console.log(info)
     return info
@@ -37,6 +28,6 @@ export default function play() {
     return info
   }
 
-  logPersonInfo(name, age)
+  const log = logPersonInfo(name, age)
   logPersonInfo2(person)
 }
