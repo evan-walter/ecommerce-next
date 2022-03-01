@@ -3,9 +3,11 @@ interface Person {
   age: number
 }
 
-interface PersonLoggerFn {
-  (name: string, age: number): string
-}
+// interface PersonLoggerFn {
+//   (name: string, age: number): string
+// }
+
+type PersonLoggerFn = (name: string, age: number) => string
 
 export default function play() {
   const name = 'Evan'
