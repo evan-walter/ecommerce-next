@@ -1,8 +1,16 @@
+// ts recommends interfaces over types
+
+// use interfaces to describe data structures in a more natural way
+// e.g. describing objects
+// e.g. shipment, orders
 interface Person {
   name: string
   age: number
 }
 
+// use types for type aliases
+// e.g. `type Data = string`. here, you can use Data and string types interchangably. interfaces can't do this.
+// use types to describe function types
 // type Person = {
 //   name: string
 //   age: number
