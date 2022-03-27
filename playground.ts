@@ -7,7 +7,17 @@ interface Person {
 //   (name: string, age: number): string
 // }
 
-type PersonLoggerFn = (name: string, age: number) => string
+// type PersonLoggerFn = (name: string, age: number) => string
+
+class Person {
+  name: string = ''
+  age: number = 0
+
+  constructor(name: string, age: number) {
+    this.name = name
+    this.age = age
+  }
+}
 
 export default function play() {
   const name = 'Evan'
