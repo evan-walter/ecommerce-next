@@ -3,7 +3,6 @@ interface Person {
   age: number
 }
 
-
 interface BusinessPerson extends Person {
   salary: number
 }
@@ -19,7 +18,7 @@ export default function play() {
     publications: ['1', '2']
   }
   
-  const person: BusinessPerson = {
+  const person2: BusinessPerson = {
     name: 'John',
     age: 100,
     salary: 1000
