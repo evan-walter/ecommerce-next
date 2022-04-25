@@ -23,10 +23,15 @@ type RaceCar = {
 
 
 export default function play() {
-  const car: Car = {
+  const car: RaceCar = {
     name: 'my car',
-    speed: 100
+    speed: 100,
+    mileage: 200,
   }
 
-  logPerson(person2)
+  function logCar(car: Car) {
+
+  }
+
+  logCar(car)
 }
