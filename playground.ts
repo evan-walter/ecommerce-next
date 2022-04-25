@@ -1,3 +1,5 @@
+
+
 interface Person {
   name: string
   age: number
@@ -11,22 +13,17 @@ interface AcademicPerson extends Person {
   publications: string[]
 }
 
+type Car = {
+  name: string
+} & { speed: number }
+
+
+
 export default function play() {
-  const person: AcademicPerson = {
-    name: 'John',
-    age: 100,
-    publications: ['1', '2']
-  }
-  
-  const person2: BusinessPerson = {
-    name: 'John',
-    age: 100,
-    salary: 1000
+  const car: Car = {
+    name: 'my car',
+    speed: 100
   }
 
-  function logPerson(person: Person) {
-
-  }
-
-  logPerson(person) // or person2
+  logPerson(person2)
 }
