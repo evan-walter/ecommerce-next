@@ -15,8 +15,11 @@ interface AcademicPerson extends Person {
 
 type Car = {
   name: string
-} & { speed: number }
+}
 
+type RaceCar = {
+  speed: number
+} & Car & { mileage: number }
 
 
 export default function play() {
