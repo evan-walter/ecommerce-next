@@ -48,9 +48,9 @@ export default function play() {
 
   const person: Person = {
     prop1: '',
-    prop2: '',
+    prop2: 2,
     name: '',
-    kind: '',
+    kind: 'academic',
     age: 23
   }
 
@@ -77,6 +77,6 @@ export default function play() {
       default:
         console.log(car)
     }
-
+    
   }
 }
