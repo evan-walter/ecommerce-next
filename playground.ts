@@ -2,45 +2,42 @@
 
 interface Person {
   name: string
+}
+
+interface Student extends Person {
   age: number
-  city: string
 }
 
-class Student implements Person {
-  name = ''
-  age = 0
-  city = ''
-}
-
-class BusinessPerson implements Person {
-  name = ''
-  age = 0
-  city = ''
-  salary = 1000
-}
-
-type Car = {
-  brand: string
+interface PostGraduateStudent extends Person {
   age: number
-  name: string
-  city: string
+  projects: string[]
 }
 
-class Logger<T extends Person = Car> {
-  log(items: Array<T>, callback: (i: T) => void) {
-    items.forEach((item) => {
-      console.log(item)
-    })
-  }
+// type StudentInfo<T extends Student = Student> = {
+//   data: T
+//   grades: number[]
+// }
+
+interface StudentInfo<T extends Student = Student> {
+  data: T
+  grades: number[]
 }
 
 export default function play() {
 
-  const logger = new Logger()
+  function logStudentInfo(info: StudentInfo<PostGraduateStudent>) {
+    console.log(info.data.name)
+    console.log(info.data.age)
+    console.log(info.data.projects)
+  }
 
-  const persons = [{name: 'filip', age: 30, city: '', brand: ''}, {name: 'john', age: 25, city: '', brand: ''}]
-  logger.log(persons, (person) => {
-    console.log(person)
-  })
+  const info = {
+    data: {
+      name: 'Filip',
+      age: 30
+    },
+    grades: [1, 2, 3, 1]
+  }
 
+  logStudentInfo(info)
 }
